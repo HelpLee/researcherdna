@@ -1,29 +1,52 @@
-# ResearchDNA
+# ResearcherDNA
 
-ResearchDNA is an early product prototype for turning a researcher's papers, code, projects and milestones into a structured **Research DNA** and a physical/digital collectible concept.
+**Your Research Matters. Make It Tangible.**
+
+ResearcherDNA is an early product prototype for turning a researcher's papers, code, projects and milestones into a structured **Researcher DNA** and a physical/digital collectible concept.
 
 ## Current version
 
-`v0.3.0`
+`v0.4.0`
 
-Current prototype features:
+### What changed in v0.4
 
-- English / 中文 / Français switching
-- Responsive landing page
-- Interactive Create flow
-- Step 1: basic researcher identity
-- Step 2: optional research sources — users can skip uploads
-- Step 3: starter Research DNA
-- Editable signature research objects
-- Collectible preview
-- Static deployment support for Vercel / GitHub Pages
+- Brand display unified as **ResearcherDNA**
+- Internal development naming remains lowercase `researcherdna`
+- New brand slogan: **Your Research Matters. Make It Tangible.**
+- Brighter, more colorful visual system while keeping an academic/research feel
+- Refined homepage hierarchy and collectible presentation
+- Clearer four-step Create flow
+- No-upload fast-start path preserved
+- Redesigned Researcher DNA and final-output sections
+- Added a research word cloud derived from approved CV, paper, GitHub, Scholar and ResearchGate sources
+- Added ten traceable signature-object candidates with researcher-controlled selection of 3–5 objects
+- Added an always-visible privacy promise plus a fuller privacy and purpose-limitation section
+- Added public prototype contact: **lahoule · lahoule.lee@gmail.com**
+- English / 中文 / Français language switching polished for typography and spacing
+- French and Chinese hero typography have dedicated responsive rules
+- Public demo identity is labeled **lahoule lee**, while institutional and research details remain illustrative
+- Prototype prices are intentionally shown as **XX** until manufacturing and pricing are validated
 
-> The current analysis is a front-end prototype. It does not yet send files to a backend or run a real AI model.
+> The current AI analysis is still a front-end prototype. It does not yet send files to a backend or run a real AI model.
+
+## Brand naming rule
+
+Use the following convention consistently:
+
+```text
+Public brand display: ResearcherDNA
+Concept name:         Researcher DNA
+Repository / folder:  researcherdna
+URL slug:             researcherdna
+Code identifiers:     researcherDna / researcherdna-*
+```
+
+Developers do not need to preserve the public-brand capitalization in filenames, paths, CSS classes or URLs.
 
 ## Project structure
 
 ```text
-researchdna/
+researcherdna/
 ├── index.html
 ├── styles.css
 ├── app.js
@@ -43,9 +66,7 @@ researchdna/
 
 ## Run locally
 
-The simplest option is to open `index.html` directly.
-
-For a local web server, from this directory run:
+From the project root:
 
 ```bash
 python -m http.server 8000
@@ -57,50 +78,72 @@ Then open:
 http://localhost:8000
 ```
 
-## Git workflow
+Language-specific local URLs:
 
-After copying these files into your local `researchdna` directory:
+```text
+English  http://localhost:8000/
+中文     http://localhost:8000/?lang=zh
+Français http://localhost:8000/?lang=fr
+```
+
+## Normal update workflow
+
+After copying v0.4 files into your existing local `researcherdna` repository:
 
 ```bash
 git status
 git add .
-git commit -m "Initialize ResearchDNA website v0.3"
-git branch -M main
+git commit -m "Upgrade ResearcherDNA website to v0.4"
 git push
 ```
 
-For future development:
+If `main` is connected to Vercel, the production website redeploys automatically after the push.
+
+For larger changes, use a feature branch:
 
 ```bash
 git switch -c feature/my-feature
 # edit files
+python -m http.server 8000
+
 git add .
 git commit -m "Add my feature"
 git push -u origin feature/my-feature
 ```
 
-Merge the feature branch into `main` when ready. If the GitHub repository is connected to Vercel, every push to `main` updates the production site automatically, while feature branches receive preview deployments.
+Vercel can create a preview deployment for the feature branch. Merge it into `main` when ready.
 
-## Language links
+## Release workflow
 
-English:
+For a named release:
 
-```text
-https://your-domain.com/
+```bash
+git add .
+git commit -m "Release ResearcherDNA v0.4.0"
+git push
+
+git tag v0.4.0
+git push origin v0.4.0
 ```
 
-Chinese:
+## Deployment model
 
 ```text
-https://your-domain.com/?lang=zh
+Local researcherdna folder
+        ↓ git push
+GitHub repository
+        ↓ automatic deployment
+Vercel
+        ↓
+Public ResearcherDNA website
 ```
 
-French:
+The public URL stays the same while the deployed version updates.
 
-```text
-https://your-domain.com/?lang=fr
-```
+## Important security rule
 
-## Next product milestones
+Never commit private CVs, unpublished papers, API keys, access tokens, secrets or `.env` files into the public repository.
+
+## Next product milestone
 
 See [`docs/ROADMAP.md`](docs/ROADMAP.md).

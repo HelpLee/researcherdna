@@ -1,28 +1,27 @@
-# ResearchDNA roadmap
+# ResearcherDNA roadmap
 
-## v0.3 — Public prototype
-- Trilingual website
-- No-upload starter flow
-- Editable Research DNA concept
-- Collectible preview
+## v0.4 — Brand & product experience refinement
+- ResearcherDNA brand unification
+- Brand slogan and visual identity
+- Brighter academic/research visual language
+- Multilingual layout polish
+- Improved onboarding and no-upload fast start
+- Researcher DNA redesign
+- Collectible/output redesign
 
-## v0.4 — Product validation
-- Better examples across research domains
-- Improved mobile UX
-- Waitlist / contact capture
-- Analytics and funnel tracking
-
-## v0.5 — Real Research DNA backend
+## v0.5 — Real Researcher DNA backend
 - Account system
 - Secure file upload
 - Paper / CV parsing
 - GitHub / ORCID / Scholar source ingestion
-- LLM-based Research DNA extraction
+- LLM-based Researcher DNA extraction
 - Evidence links for every inferred identity element
+- Real saved profiles rather than front-end demo state
 
 ## v0.6 — Visual generation
 - AI character concept generation
 - Research object generation
+- Flagship artifact generation
 - Packaging generation
 - Human approval workflow
 
@@ -30,6 +29,7 @@
 - Stripe
 - Orders
 - Production approval
+- Manufacturing workflow
 - Shipping status
 
 ## v1.0 — Researcher collectible MVP
